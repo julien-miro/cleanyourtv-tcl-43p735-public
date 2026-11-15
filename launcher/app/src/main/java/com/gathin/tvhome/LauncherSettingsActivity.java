@@ -180,7 +180,7 @@ public final class LauncherSettingsActivity extends Activity {
         android.app.role.RoleManager roles = android.os.Build.VERSION.SDK_INT >= 29
                 ? getSystemService(android.app.role.RoleManager.class) : null;
         CharSequence label;
-        if (roles != null && roles.isRoleHeld(android.app.role.RoleManager.ROLE_HOME)) {
+        if (android.os.Build.VERSION.SDK_INT >= 29 && roles != null && roles.isRoleHeld(android.app.role.RoleManager.ROLE_HOME)) {
             label = getText(R.string.app_name);
         } else {
             Intent home = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME);

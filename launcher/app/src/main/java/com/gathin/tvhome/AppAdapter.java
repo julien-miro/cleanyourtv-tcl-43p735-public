@@ -492,8 +492,9 @@ public class AppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (StoreUpdateListener.STORE.equals(packageAt(position))
                 && StoreUpdateListener.state(ctx).getBoolean(StoreUpdateListener.AVAILABLE, false)) {
             android.app.NotificationManager notifications = ctx.getSystemService(android.app.NotificationManager.class);
-            storeUpdate = notifications != null && notifications.isNotificationListenerAccessGranted(
-                    new ComponentName(ctx, StoreUpdateListener.class));
+            storeUpdate = android.os.Build.VERSION.SDK_INT < 27 || (notifications != null
+                    && notifications.isNotificationListenerAccessGranted(
+                    new ComponentName(ctx, StoreUpdateListener.class)));
         }
         h.card.findViewById(R.id.storeBadge).setVisibility(storeUpdate ? View.VISIBLE : View.GONE);
         Entry e = items.get(position);
