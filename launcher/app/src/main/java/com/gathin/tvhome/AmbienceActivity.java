@@ -151,10 +151,10 @@ public final class AmbienceActivity extends Activity {
         });
     }
     private static Bitmap preview(Context context, int scene) {
-        String name = scene == 0 ? "christmas" : stillScene(scene);
+        String name = scene == 0 ? "fireplace-preview" : stillScene(scene);
         try (InputStream input = context.getAssets().open("ambience/" + name + ".jpg")) {
             BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 4;
+            options.inSampleSize = scene == 0 ? 1 : 4;
             return BitmapFactory.decodeStream(input, null, options);
         } catch (IOException unavailable) {
             return null;
