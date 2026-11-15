@@ -10,6 +10,8 @@ An Apple TV-inspired home screen for the TCL 43P735 (Smart TV Pro, BeyondTV4), r
 
 The green lock shows that Android detects a VPN. Select it to open the detected VPN app. A kill switch can keep the indicator active when the VPN app is disconnected from its server.
 
+![en-home](docs/tcl-43p735-screenshots/en-home.png)
+
 ## Default appearance
 
 On a fresh install, the APK includes a TCL theme: the Glacier Glass wallpaper, six gallery images, a six-slot glass dock at 45% opacity, no visible rows below the dock and compact top buttons. Missing favourites are replaced by available apps. The VPN shortcut can discover an installed Android VPN app when no configured app is available. Fresh-install behaviour and detection with a second VPN provider still need device testing.
@@ -23,9 +25,11 @@ On a fresh install, the APK includes a TCL theme: the Glacier Glass wallpaper, s
 - Save up to three profiles on the TV, including the app order, appearance and wallpaper gallery. Each slot shows a date and an optional description.
 
 
+![en-appearance](docs/tcl-43p735-screenshots/en-appearance.png)
+
 ## Ambient scenes
 
-Open **Launcher settings → Ambience** for still scenes and optional automatic playback after inactivity on the launcher home screen. For the animated fireplace, place your own compatible MP4 in the launcher's external files directory as `christmas-fireplace.mp4`. The tested format was H.264 1080p at 30 fps with AAC audio. Media3 loops the local clip with sound. The video is supplied by the user.
+Open **Launcher settings → Ambience** to browse animations and still images separately. Press OK to play a scene and select it for automatic start. Its name appears above the delay slider. Automatic start can be turned off or set to 1, 2, 5, 10, 15, 20, 30 or 60 minutes of inactivity on the launcher home screen. For the animated fireplace, place your own compatible MP4 in the launcher's external files directory as `christmas-fireplace.mp4`. The tested format was H.264 1080p at 30 fps with AAC audio. Media3 loops the local clip with sound. The video is supplied by the user.
 
 ## Play Store update badge
 
@@ -35,6 +39,12 @@ The optional green dot reacts to recognized Play Store update notifications. Ena
 
 Use **System → Launcher language** to follow the TV language or select French or English. The TV's system menus retain their own language. The System panel also opens the default Home picker and offers shortcuts to reload Home and repair the Home button.
 
+
+![en-system](docs/tcl-43p735-screenshots/en-system.png)
+
+![en-language](docs/tcl-43p735-screenshots/en-language.png)
+
+![en-profiles](docs/tcl-43p735-screenshots/en-profiles.png)
 
 ## Verified on this TV
 
@@ -64,7 +74,7 @@ Un accueil inspiré d’Apple TV, pilotable à la télécommande, sur une TCL 43
 **Accueil** — Le cadenas vert indique un VPN détecté par Android. Le dock vitré accueille six applis, dont le Play Store. Les curseurs et l’engrenage ouvrent deux menus distincts.
 
 
-**Apparence** — Aperçu du fond sélectionné, réglage de la grille, format de l’horloge et intensité des effets avancés.
+**Apparence** — Sélecteur de fonds avec miniatures, réglage de la grille, format de l’horloge et intensité des effets avancés.
 
 
 **Système et profils** — Choix de l’accueil Android, réparation du bouton Home et sauvegardes locales datées avec récapitulatif.
@@ -78,6 +88,12 @@ Un accueil inspiré d’Apple TV, pilotable à la télécommande, sur une TCL 43
 - **Google Play Store** dans la grille, épinglable au dock pour accéder aux mises à jour. Une pastille verte signale les notifications de mise à jour reconnues.
 - **Cinq commandes en haut** dans la configuration testée — Sources, Ethernet, VPN, réglages du lanceur et paramètres TV. L’engrenage ouvre les paramètres TV et les trois curseurs ouvrent ceux du lanceur. Le cadenas reflète l’état du VPN vu par Android et ouvre le VPN détecté. Le kill switch peut maintenir cet état même sans connexion au serveur VPN.
 
+![accueil](docs/tcl-43p735-screenshots/accueil.png)
+
+![apparence](docs/tcl-43p735-screenshots/apparence.png)
+
+![effets](docs/tcl-43p735-screenshots/effets.png)
+
 ## Apparence par défaut
 
 Sur une installation neuve, l’APK embarque l’apparence des captures : fond Verre glacier, six images dans la galerie, dock vitré à six places et 45 % d’opacité, aucune rangée visible sous le dock et boutons compacts. Le lanceur complète les places des favoris absents avec les applis disponibles. Le cadenas peut détecter une appli VPN Android installée si aucune appli configurée ne répond. Le premier lancement et la détection avec un autre fournisseur restent à tester sur appareil.
@@ -86,7 +102,7 @@ Sur une installation neuve, l’APK embarque l’apparence des captures : fond V
 
 | Rubrique | Commandes |
 | --- | --- |
-| **Apparence** | Aperçu du fond sélectionné, galerie avec vignettes, import JPEG/PNG/WebP jusqu’à 20 Mo via le sélecteur Android, suppression avec confirmation. L’accès à une clé USB dépend de ce que le sélecteur expose sur le téléviseur. |
+| **Apparence** | Sélecteur de fonds avec miniatures, galerie avec vignettes, import JPEG/PNG/WebP jusqu’à 20 Mo via le sélecteur Android, suppression avec confirmation. L’accès à une clé USB dépend de ce que le sélecteur expose sur le téléviseur. |
 | **Dock et horloge** | Curseurs pour la disposition et l’opacité, réorganisation des applis et choix du format horaire système, 12 h ou 24 h. |
 | **Animations et effets** | Animations désactivables et quatre niveaux d’intensité pour les effets avancés. L’intensité agit sur le zoom, le relief et le soulèvement de la tuile dans la grille. |
 | **Système** | Sélecteur Android de l’accueil par défaut, accès aux paramètres TV, rechargement de l’accueil et raccourci vers les réglages d’accessibilité pour réparer Bouton Accueil. |
@@ -96,11 +112,17 @@ La remise aux valeurs du thème demande confirmation. Les profils restent dans l
 
 ## Ambiance
 
-Ouvre **Paramètres du lanceur → Ambiance** pour les images fixes et le lancement automatique après un délai d’inactivité sur l’accueil. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. La vidéo est fournie par l’utilisateur.
+Ouvre **Paramètres du lanceur → Ambiance** pour parcourir les animations et les images fixes. OK lance la scène et la sélectionne pour le démarrage automatique. Son nom apparaît au-dessus du curseur. Le délai peut être désactivé ou réglé à 1, 2, 5, 10, 15, 20, 30 ou 60 minutes. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. La vidéo est fournie par l’utilisateur.
 
 ## Pastille de mise à jour Play Store
 
 La pastille verte réagit aux notifications de mise à jour reconnues. Pour accorder l’accès aux notifications, ouvrir **Système → Pastille de mise à jour Play Store**. Sur la TCL testée, cet écran était indisponible et l’accès a été accordé dans le shell Android avec `cmd notification allow_listener com.gathin.tvhome/.StoreUpdateListener`. Le service a été vérifié. L’affichage de la pastille reste à confirmer avec une notification correspondante. Des mises à jour peuvent être disponibles même si la pastille est éteinte.
+
+![systeme](docs/tcl-43p735-screenshots/systeme.png)
+
+![langue](docs/tcl-43p735-screenshots/langue.png)
+
+![profils](docs/tcl-43p735-screenshots/profils.png)
 
 ## Ce qui a été vérifié sur la TCL
 
