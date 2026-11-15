@@ -24,6 +24,16 @@ public final class AmbienceActivity extends Activity {
     private static final int[] MINUTES = {0, 1, 2, 5, 10, 15, 20, 30, 60};
     private static final String[] SEASONS = {"winter", "spring", "summer", "autumn"};
 
+    private static final String SCREENSAVER_ENABLED = "screensaver_enabled";
+    private static final String LOCAL_MODE = "ambience_local_mode";
+    static final int GOOGLE_TV = 0, CLEAN_YOUR_TV = 1, OFF = 2;
+
+    static int screensaverMode(Context context) {
+        if (android.provider.Settings.Secure.getInt(context.getContentResolver(),
+                SCREENSAVER_ENABLED, 1) != 0) return GOOGLE_TV;
+        return context.getSharedPreferences(Config.SETTINGS_NAME, MODE_PRIVATE)
+                .getInt(LOCAL_MODE, OFF) == CLEAN_YOUR_TV ? CLEAN_YOUR_TV : OFF;
+    }
     static int idleMinutes(Context context) {
         return context.getSharedPreferences(Config.SETTINGS_NAME, MODE_PRIVATE).getInt(DELAY, 0);
     }
@@ -89,6 +99,43 @@ public final class AmbienceActivity extends Activity {
         for (int i = 0; i < MINUTES.length; i++) {
             if (MINUTES[i] == idleMinutes(activity)) selected = i;
         }
+        android.widget.TextView system = panel.findViewById(R.id.ambienceSystemScreensaver);
+        String[] modes = activity.getResources().getStringArray(R.array.ambience_modes);
+        Runnable refreshMode = () -> {
+            int mode = screensaverMode(activity);
+            system.setText(activity.getString(R.string.ambience_mode_current, modes[mode]));
+            delay.setEnabled(mode == CLEAN_YOUR_TV);
+        };
+        refreshMode.run();
+        system.setOnClickListener(button -> new android.app.AlertDialog.Builder(activity)
+                .setTitle(R.string.ambience_mode_title)
+                .setSingleChoiceItems(modes, screensaverMode(activity), (dialog, mode) -> {
+                    dialog.dismiss();
+                    try {
+                        boolean applied = android.provider.Settings.Secure.putInt(
+                                activity.getContentResolver(), SCREENSAVER_ENABLED,
+                                mode == GOOGLE_TV ? 1 : 0);
+                        if (!applied) throw new SecurityException();
+                        android.content.SharedPreferences.Editor edit = settings.edit().putInt(LOCAL_MODE, mode);
+                        if (mode == CLEAN_YOUR_TV && idleMinutes(activity) == 0) {
+                            edit.putInt(DELAY, 5);
+                            delay.setProgress(3);
+                        }
+                        edit.apply();
+                        refreshMode.run();
+                    } catch (SecurityException unavailable) {
+                        android.widget.Toast.makeText(activity, R.string.ambience_mode_permission,
+                                android.widget.Toast.LENGTH_LONG).show();
+                    }
+                }).setNegativeButton(android.R.string.cancel, null).show());
+        panel.findViewById(R.id.ambienceSystemSettings).setOnClickListener(button -> {
+            try {
+                activity.startActivity(new Intent(android.provider.Settings.ACTION_DREAM_SETTINGS));
+            } catch (android.content.ActivityNotFoundException | SecurityException unavailable) {
+                android.widget.Toast.makeText(activity, R.string.not_available,
+                        android.widget.Toast.LENGTH_SHORT).show();
+            }
+        });
         delay.setNextFocusLeftId(R.id.ambienceSection);
         delay.setMax(MINUTES.length - 1);
         delay.setKeyProgressIncrement(1);

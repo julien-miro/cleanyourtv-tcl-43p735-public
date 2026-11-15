@@ -206,4 +206,10 @@
     <string name="ambience_active_scene">Selected scene: %1$s</string>
     <string name="ambience_animations">Animations</string>
     <string name="ambience_stills">Still images</string>
+    <string name="ambience_system_screensaver">Use Google TV screensaver</string>
+    <string name="ambience_system_settings">System screensaver settings</string>
+    <string name="ambience_mode_title">Automatic screensaver</string>
+    <string name="ambience_mode_current">Automatic screensaver: %1$s</string>
+    <string name="ambience_mode_permission">Android blocked the change. Open system screensaver settings.</string>
+    <string-array name="ambience_modes"><item>Google TV</item><item>CleanYourTV</item><item>None</item></string-array>
 </resources>

@@ -1325,9 +1325,14 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     private void restartIdleClock() {
         root.removeCallbacks(showIdleClock);
-        long ambienceDelay = AmbienceActivity.idleMinutes(this) * MINUTE_MS;
-        long delay = ambienceDelay > 0 ? ambienceDelay : idleClockMs;
-        if (resumed && delay > 0) root.postDelayed(showIdleClock, delay);
+        long delay = AmbienceActivity.screensaverMode(this) == AmbienceActivity.CLEAN_YOUR_TV
+                ? AmbienceActivity.idleMinutes(this) * MINUTE_MS : 0;
+        if (resumed && delay > 0) {
+            getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            root.postDelayed(showIdleClock, delay);
+        } else {
+            getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
     }
 
     @Override

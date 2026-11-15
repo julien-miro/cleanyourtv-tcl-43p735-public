@@ -14,6 +14,8 @@
           <TextView android:id="@+id/ambienceActiveScene" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="#FFF1F5FA" />
           <TextView android:id="@+id/ambienceDelayValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFF1F5FA" />
           <SeekBar android:id="@+id/ambienceChoice" android:contentDescription="@string/ambience_idle" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+          <TextView android:id="@+id/ambienceSystemScreensaver" style="@style/SettingsRow" android:layout_height="48dp" />
+          <TextView android:id="@+id/ambienceSystemSettings" style="@style/SettingsRow" android:layout_height="42dp" android:text="@string/ambience_system_settings" />
         </LinearLayout>
       </LinearLayout>
       <LinearLayout android:id="@+id/displayPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">

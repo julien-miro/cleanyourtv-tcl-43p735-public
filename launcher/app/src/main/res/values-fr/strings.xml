@@ -152,4 +152,10 @@
     <string name="ambience_active_scene">Scène sélectionnée : %1$s</string>
     <string name="ambience_animations">Animations</string>
     <string name="ambience_stills">Images fixes</string>
+    <string name="ambience_system_screensaver">Utiliser la veille de Google TV</string>
+    <string name="ambience_system_settings">Réglages de la veille système</string>
+    <string name="ambience_mode_title">Veille automatique</string>
+    <string name="ambience_mode_current">Veille automatique : %1$s</string>
+    <string name="ambience_mode_permission">Android bloque le changement. Consulte les réglages de la veille système.</string>
+    <string-array name="ambience_modes"><item>Google TV</item><item>CleanYourTV</item><item>Aucune</item></string-array>
 </resources>

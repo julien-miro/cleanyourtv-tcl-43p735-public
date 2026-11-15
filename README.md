@@ -29,7 +29,22 @@ On a fresh install, the APK includes a TCL theme: the Glacier Glass wallpaper, s
 
 ## Ambient scenes
 
-Open **Launcher settings → Ambience** to browse animations and still images separately. Press OK to play a scene and select it for automatic start. Its name appears above the delay slider. Automatic start can be turned off or set to 1, 2, 5, 10, 15, 20, 30 or 60 minutes of inactivity on the launcher home screen. For the animated fireplace, place your own compatible MP4 in the launcher's external files directory as `christmas-fireplace.mp4`. The tested format was H.264 1080p at 30 fps with AAC audio. Media3 loops the local clip with sound. Download the [tested clip](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) or use your own.
+Open **Launcher settings → Ambience** to browse animations and still images separately. Press OK to play a scene and select it for automatic start. Its name appears above the delay slider. In CleanYourTV mode, the delay can be turned off or set to 1, 2, 5, 10, 15, 20, 30 or 60 minutes of inactivity on the launcher home screen. For the animated fireplace, place your own compatible MP4 in the launcher's external files directory as `christmas-fireplace.mp4`. The tested format was H.264 1080p at 30 fps with AAC audio. Media3 loops the local clip with sound. Download the [tested clip](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) or use your own.
+
+### Automatic screensaver
+
+- **Google TV** enables the system photo slideshow and uses the system delay.
+- **CleanYourTV** disables the Google TV slideshow. It keeps the screen on while waiting on the launcher home screen, then starts the selected scene.
+- **None** disables both automatic scenes. Android can still turn the screen off.
+
+For the launcher to change the system setting, authorize it once from an authorized ADB shell:
+
+    pm grant com.gathin.tvhome android.permission.WRITE_SECURE_SETTINGS
+
+This permission allows writes to Android secure settings. In this feature it is used to change the system screensaver setting. Turn off network debugging after setup.
+
+**Device test.** On one TCL 43P735 (BeyondTV4, Android TV 11), the menu switched the system setting off in CleanYourTV and None, and back on in Google TV. The local scene started after 1 minute and after 20 minutes with Google TV disabled. During the 20-minute run, passive checks at 10, 11 and 19 minutes found the launcher home screen awake. At the first check after 20 minutes, Ambience was in the foreground.
+
 
 ## Play Store update badge
 
@@ -112,7 +127,22 @@ La remise aux valeurs du thème demande confirmation. Les profils restent dans l
 
 ## Ambiance
 
-Ouvre **Paramètres du lanceur → Ambiance** pour parcourir les animations et les images fixes. OK lance la scène et la sélectionne pour le démarrage automatique. Son nom apparaît au-dessus du curseur. Le délai peut être désactivé ou réglé à 1, 2, 5, 10, 15, 20, 30 ou 60 minutes. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. Télécharge la [vidéo testée](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) ou utilise ton propre extrait.
+Ouvre **Paramètres du lanceur → Ambiance** pour parcourir les animations et les images fixes. OK lance la scène et la sélectionne pour le démarrage automatique. Son nom apparaît au-dessus du curseur. En mode CleanYourTV, le délai peut être désactivé ou réglé à 1, 2, 5, 10, 15, 20, 30 ou 60 minutes. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. Télécharge la [vidéo testée](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) ou utilise ton propre extrait.
+
+### Veille automatique
+
+- **Google TV** active le diaporama système et utilise le délai Android.
+- **CleanYourTV** désactive le diaporama Google TV. Le lanceur garde l’écran allumé sur son accueil pendant le décompte, puis démarre la scène sélectionnée.
+- **Aucune** coupe les deux déclenchements automatiques. Android peut toujours éteindre l’écran.
+
+Pour permettre au lanceur de modifier le réglage système, accorde une fois cette autorisation depuis un shell ADB déjà autorisé :
+
+    pm grant com.gathin.tvhome android.permission.WRITE_SECURE_SETTINGS
+
+Cette autorisation permet de modifier les réglages sécurisés Android. Dans cette fonction, elle sert au réglage de la veille système. Coupe le débogage réseau après la configuration.
+
+**Essai sur la TCL.** Sur une TCL 43P735 (BeyondTV4, Android TV 11), le menu a désactivé la veille système avec CleanYourTV et Aucune, puis l’a réactivée avec Google TV. La scène locale a démarré à 1 minute et à 20 minutes, avec Google TV désactivé. Lors de l’essai long, les relevés passifs à 10, 11 et 19 minutes ont trouvé l’écran allumé sur l’accueil. Au premier relevé après 20 minutes, Ambiance était au premier plan.
+
 
 ## Pastille de mise à jour Play Store
 
