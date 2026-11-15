@@ -33,6 +33,10 @@ Open **Launcher settings → Ambience** to browse animations and still images se
 
 ### Automatic screensaver
 
+| Ambience panel | Screensaver mode picker |
+| --- | --- |
+| ![Ambience panel](docs/tcl-43p735-screenshots/en-ambience.png) | ![Screensaver mode picker](docs/tcl-43p735-screenshots/en-screensaver.png) |
+
 - **Google TV** enables the system photo slideshow and uses the system delay.
 - **CleanYourTV** disables the Google TV slideshow. It keeps the screen on while waiting on the launcher home screen, then starts the selected scene.
 - **None** disables both automatic scenes. Android can still turn the screen off.
@@ -130,6 +134,10 @@ La remise aux valeurs du thème demande confirmation. Les profils restent dans l
 Ouvre **Paramètres du lanceur → Ambiance** pour parcourir les animations et les images fixes. OK lance la scène et la sélectionne pour le démarrage automatique. Son nom apparaît au-dessus du curseur. En mode CleanYourTV, le délai peut être désactivé ou réglé à 1, 2, 5, 10, 15, 20, 30 ou 60 minutes. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. Télécharge la [vidéo testée](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) ou utilise ton propre extrait.
 
 ### Veille automatique
+
+| Panneau Ambiance | Sélecteur de veille |
+| --- | --- |
+| ![Panneau Ambiance](docs/tcl-43p735-screenshots/ambiance.png) | ![Sélecteur de veille](docs/tcl-43p735-screenshots/veille.png) |
 
 - **Google TV** active le diaporama système et utilise le délai Android.
 - **CleanYourTV** désactive le diaporama Google TV. Le lanceur garde l’écran allumé sur son accueil pendant le décompte, puis démarre la scène sélectionnée.
