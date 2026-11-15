@@ -29,7 +29,7 @@ On a fresh install, the APK includes a TCL theme: the Glacier Glass wallpaper, s
 
 ## Ambient scenes
 
-Open **Launcher settings → Ambience** to browse animations and still images separately. Press OK to play a scene and select it for automatic start. Its name appears above the delay slider. Automatic start can be turned off or set to 1, 2, 5, 10, 15, 20, 30 or 60 minutes of inactivity on the launcher home screen. For the animated fireplace, place your own compatible MP4 in the launcher's external files directory as `christmas-fireplace.mp4`. The tested format was H.264 1080p at 30 fps with AAC audio. Media3 loops the local clip with sound. The video is supplied by the user.
+Open **Launcher settings → Ambience** to browse animations and still images separately. Press OK to play a scene and select it for automatic start. Its name appears above the delay slider. Automatic start can be turned off or set to 1, 2, 5, 10, 15, 20, 30 or 60 minutes of inactivity on the launcher home screen. For the animated fireplace, place your own compatible MP4 in the launcher's external files directory as `christmas-fireplace.mp4`. The tested format was H.264 1080p at 30 fps with AAC audio. Media3 loops the local clip with sound. Download the [tested clip](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) or use your own.
 
 ## Play Store update badge
 
@@ -112,7 +112,7 @@ La remise aux valeurs du thème demande confirmation. Les profils restent dans l
 
 ## Ambiance
 
-Ouvre **Paramètres du lanceur → Ambiance** pour parcourir les animations et les images fixes. OK lance la scène et la sélectionne pour le démarrage automatique. Son nom apparaît au-dessus du curseur. Le délai peut être désactivé ou réglé à 1, 2, 5, 10, 15, 20, 30 ou 60 minutes. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. La vidéo est fournie par l’utilisateur.
+Ouvre **Paramètres du lanceur → Ambiance** pour parcourir les animations et les images fixes. OK lance la scène et la sélectionne pour le démarrage automatique. Son nom apparaît au-dessus du curseur. Le délai peut être désactivé ou réglé à 1, 2, 5, 10, 15, 20, 30 ou 60 minutes. Pour la cheminée animée, place ton propre MP4 dans le dossier de fichiers externes du lanceur sous le nom `christmas-fireplace.mp4`. Le format testé est H.264 en 1080p à 30 images/s avec du son AAC. Media3 lit le fichier local en boucle avec le son. Télécharge la [vidéo testée](https://github.com/julien-miro/cleanyourtv-tcl-43p735-public/releases/download/ambiance-fireplace/christmas-fireplace.mp4) ou utilise ton propre extrait.
 
 ## Pastille de mise à jour Play Store
 
